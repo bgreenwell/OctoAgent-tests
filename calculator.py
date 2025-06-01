@@ -10,7 +10,6 @@ def subtract(x, y):
 
 def multiply(x, y):
     """Multiplies two numbers."""
-    # Intentionally simple, could be a place for a bug (e.g., if it returned x + y)
     return x * y
 
 def divide(x, y):
@@ -24,5 +23,5 @@ def divide(x, y):
     return x / y
 
 def exponentiate(base, exponent):
-    """Calculates the exponentiation of base raised to the power of exponent."""
+    """Returns base raised to the power of exponent."""
     return base ** exponent
