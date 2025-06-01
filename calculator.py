@@ -10,7 +10,6 @@ def subtract(x, y):
 
 def multiply(x, y):
     """Multiplies two numbers."""
-    # Intentionally simple, could be a place for a bug (e.g., if it returned x + y)
     return x * y
 
 def divide(x, y):
@@ -23,9 +22,19 @@ def divide(x, y):
         raise ValueError("Cannot divide by zero!")
     return x / y
 
-# Example of a function that could be targeted by an issue
-def power(base, exponent):
-    """Calculates base to the power of exponent."""
-    # Potential bug: Incorrectly uses addition instead of exponentiation
-    result = base + exponent # This is a bug, should be base ** exponent
-    return result
+def exponentiate(base, exponent):
+    """Calculates base raised to the power of exponent.
+    
+    Parameters:
+        base (float): The base number.
+        exponent (float): The exponent number.
+    
+    Returns:
+        float: The result of base ** exponent.
+    
+    Raises:
+        TypeError: If base or exponent is not a number.
+    """
+    if not isinstance(base, (int, float)) or not isinstance(exponent, (int, float)):
+        raise TypeError("Both base and exponent must be numbers.")
+    return base ** exponent
