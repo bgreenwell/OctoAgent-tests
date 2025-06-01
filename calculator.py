@@ -23,18 +23,5 @@ def divide(x, y):
     return x / y
 
 def exponentiate(base, exponent):
-    """Calculates base raised to the power of exponent.
-    
-    Parameters:
-        base (float): The base number.
-        exponent (float): The exponent number.
-    
-    Returns:
-        float: The result of base ** exponent.
-    
-    Raises:
-        TypeError: If base or exponent is not a number.
-    """
-    if not isinstance(base, (int, float)) or not isinstance(exponent, (int, float)):
-        raise TypeError("Both base and exponent must be numbers.")
+    """Calculates base raised to the power of exponent."""
     return base ** exponent
